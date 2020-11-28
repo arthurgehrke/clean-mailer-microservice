@@ -1,5 +1,5 @@
 {
-  "name": "ddd-microservice",
+  "name": "mailer-microservice",
   "version": "1.0.0",
   "main": "index.js",
   "author": "arthurgehrke <arthurgehrke07@gmail.com>",
