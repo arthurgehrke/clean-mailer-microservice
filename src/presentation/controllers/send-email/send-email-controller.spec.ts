@@ -1,11 +1,17 @@
 import { SendEmailController } from './send-email-controller';
 import { AddEmailAddress } from '../../../domain/usecases/add-email-address';
+import { EmailAddress } from '../../../domain/models/email-address';
+import { mockEmailAddress } from '../../../domain/test/mock-email-address';
 
 class AddEmailAddressSpy implements AddEmailAddress {
-  add(email: string): any {
-    const providedEmail = email;
+  emailModel = mockEmailAddress();
 
-    return providedEmail;
+  emailAddress!: EmailAddress;
+
+  add(email: EmailAddress): EmailAddress {
+    this.emailAddress = email;
+
+    return this.emailModel;
   }
 }
 
